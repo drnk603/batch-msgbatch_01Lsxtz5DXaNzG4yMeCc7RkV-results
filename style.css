@@ -617,11 +617,9 @@ button:focus-visible,
 }
 
 .g-3 {
-  gap: var(--space-lg);
 }
 
 .g-4 {
-  gap: var(--space-xl);
 }
 
 .align-items-center {
@@ -1131,7 +1129,6 @@ button:focus-visible,
 .c-card {
   display: flex;
   flex-direction: column;
-  height: 100%;
   background-color: var(--color-white);
   border: 1px solid var(--color-neutral-200);
   border-radius: var(--border-radius-lg);
@@ -2234,6 +2231,14 @@ svg[aria-hidden="true"] {
 
   .p-4 {
     padding: var(--space-lg);
+  }
+
+  .g-3 {
+    gap: var(--space-lg);
+  }
+
+  .g-4 {
+    gap: var(--space-xl);
   }
 }
 

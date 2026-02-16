@@ -1,4 +1,70 @@
 <!DOCTYPE html><html lang="nl"><head>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://domain.com/#org",
+      "name": "domain",
+      "url": "https://domain.com",
+      "email": "team@domain.com",
+      "telephone": "+31 20 8331199",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "The Hague Tower, Rijswijkseplein 786, Floor 9, Office 914, 2516 LX Den Haag"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer support",
+        "email": "team@domain.com",
+        "telephone": "+31 20 8331199"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://domain.com/#website",
+      "url": "https://domain.com",
+      "name": "domain",
+      "publisher": {
+        "@id": "https://domain.com/#org"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://domain.com/about.html#webpage",
+      "url": "https://domain.com/about.html",
+      "name": "Over Ons - Onze Expertise in Consultancy | domain.com",
+      "isPartOf": {
+        "@id": "https://domain.com/#website"
+      },
+      "about": {
+        "@id": "https://domain.com/#org"
+      },
+      "inLanguage": "nl",
+      "description": "Ontdek ons verhaal, ontmoet ons team van experts en leer meer over onze missie in consultancy. Wij helpen bedrijven groeien met strategisch advies."
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://domain.com/about.html#breadcrumbs",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://domain.com"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "About.Html",
+          "item": "https://domain.com/about.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Over Ons - Onze Expertise in Consultancy | domain.com</title>
@@ -12,28 +78,34 @@
   <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/png" href="/favicon.png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
- </head>
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+<link rel="stylesheet" href="./header-footer.css">
+<link rel="stylesheet" href="./consent.css">
+<script src="./consent.js"></script>
+</head>
  <body>
-  <header class="l-header">
-   <nav class="c-nav navbar navbar-expand-lg sticky-top bg-white border-bottom" role="navigation" aria-label="Hoofdnavigatie">
-    <div class="container">
-     <a class="c-logo navbar-brand" href="/"> <span class="c-logo__text">Consultancy Advies</span> </a>
-     <button class="c-nav__toggle navbar-toggler" type="button" aria-controls="navbarNav" aria-expanded="false" aria-label="Navigatie menu"><span class="navbar-toggler-icon"></span></button>
-     <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="c-nav__list navbar-nav ms-auto">
-       <li class="c-nav__item nav-item"><a class="c-nav__link nav-link" href="/" aria-current="page">Home</a></li>
-       <li class="c-nav__item nav-item"><a class="c-nav__link nav-link" href="about.html">Over Ons</a></li>
-       <li class="c-nav__item nav-item"><a class="c-nav__link nav-link" href="services.html">Diensten</a></li>
-       <li class="c-nav__item nav-item"><a class="c-nav__link nav-link" href="careers.html">Carrières</a></li>
-       <li class="c-nav__item nav-item"><a class="c-nav__link nav-link" href="contact.html">Contact</a></li>
+<header class="dr-header" data-dr-variant="v1">
+  <div class="dr-header-inner">
+    <a class="dr-logo" href="./index.html" aria-label="domain">domain</a>
+
+    <nav class="dr-nav" aria-label="Primary navigation">
+      <ul class="dr-nav-list">
+        <li class="dr-nav-item"><a class="dr-nav-link" href="./index.html">Home</a></li><li class="dr-nav-item"><a class="dr-nav-link" href="./about.html">About</a></li><li class="dr-nav-item"><a class="dr-nav-link" href="./careers.html">Careers</a></li><li class="dr-nav-item"><a class="dr-nav-link" href="./contact.html">Contact</a></li><li class="dr-nav-item"><a class="dr-nav-link" href="./services.html">Services</a></li>
       </ul>
-      <div class="ms-lg-3">
-       <a href="contact.html" class="c-button c-button--primary">Gratis Consult</a>
-      </div>
-     </div>
-    </div>
-   </nav>
-  </header>
+    </nav>
+
+    <button class="dr-burger" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="dr-mobile-menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+<nav class="dr-mobile-menu" id="dr-mobile-menu" aria-label="Mobile navigation">
+  <ul class="dr-mobile-nav-list">
+    <li class="dr-nav-item"><a class="dr-nav-link" href="./index.html">Home</a></li><li class="dr-nav-item"><a class="dr-nav-link" href="./about.html">About</a></li><li class="dr-nav-item"><a class="dr-nav-link" href="./careers.html">Careers</a></li><li class="dr-nav-item"><a class="dr-nav-link" href="./contact.html">Contact</a></li><li class="dr-nav-item"><a class="dr-nav-link" href="./services.html">Services</a></li>
+  </ul>
+</nav>
+
   <a href="#main-content" class="u-visually-hidden">Spring naar hoofdinhoud</a>
   <main id="main-content">
    <nav aria-label="breadcrumb" class="py-3">
@@ -338,7 +410,7 @@
            <rect width="48" height="48" rx="24" fill="currentColor" opacity="0.1"></rect> <path d="M24 14C19.0294 14 15 18.0294 15 23C15 27.9706 19.0294 32 24 32C28.9706 32 33 27.9706 33 23C33 18.0294 28.9706 14 24 14ZM24 28C21.2386 28 19 25.7614 19 23C19 20.2386 21.2386 18 24 18C26.7614 18 29 20.2386 29 23C29 25.7614 26.7614 28 24 28ZM24 20C22.3431 20 21 21.3431 21 23C21 24.6569 22.3431 26 24 26C25.6569 26 27 24.6569 27 23C27 21.3431 25.6569 20 24 20Z" fill="currentColor"></path>
           </svg>
           <h3 class="h6 fw-bold mb-2">Adres</h3>
-          <p class="mb-0 small">{address}</p>
+          <p class="mb-0 small">The Hague Tower, Rijswijkseplein 786, Floor 9, Office 914, 2516 LX Den Haag</p>
          </div>
         </div>
         <div class="col-md-4">
@@ -347,7 +419,7 @@
            <rect width="48" height="48" rx="24" fill="currentColor" opacity="0.1"></rect> <path d="M31 19L25 24L19 19M19 29H29C30.1046 29 31 28.1046 31 27V21C31 19.8954 30.1046 19 29 19H19C17.8954 19 17 19.8954 17 21V27C17 28.1046 17.8954 29 19 29Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
           </svg>
           <h3 class="h6 fw-bold mb-2">Email</h3>
-          <p class="mb-0 small"><a href="mailto:info@domain.com" class="text-decoration-none">info@domain.com</a></p>
+          <p class="mb-0 small"><a href="mailto:team@domain.com" class="text-decoration-none">team@domain.com</a></p>
          </div>
         </div>
         <div class="col-md-4">
@@ -356,7 +428,7 @@
            <rect width="48" height="48" rx="24" fill="currentColor" opacity="0.1"></rect> <path d="M29.5 18.5C29.5 18.5 29.5 20.5 27.5 22.5C25.5 24.5 23.5 24.5 23.5 24.5M19 28L20.5 29.5C21.3284 30.3284 22.6716 30.3284 23.5 29.5L25 28C25.8284 27.1716 25.8284 25.8284 25 25L24 24M24 24L27 21M27 21L28 20C28.8284 19.1716 30.1716 19.1716 31 20L32.5 21.5C33.3284 22.3284 33.3284 23.6716 32.5 24.5L31 26M27 21L31 26" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
           </svg>
           <h3 class="h6 fw-bold mb-2">Telefoon</h3>
-          <p class="mb-0 small"><a href="tel:{telephone}" class="text-decoration-none">{telephone}</a></p>
+          <p class="mb-0 small"><a href="tel:+31 20 8331199" class="text-decoration-none">+31 20 8331199</a></p>
          </div>
         </div>
        </div>
@@ -365,54 +437,63 @@
     </div>
    </section>
   </main>
-  <footer class="l-footer bg-white border-top pt-5 pb-3" role="contentinfo">
-   <div class="container">
-    <div class="row g-4">
-     <div class="col-12 col-md-6 col-lg-4">
-      <h3 class="h5 fw-bold mb-3">Consultancy Advies</h3>
-      <p class="text-muted mb-3">Uw partner in strategische groei en operationele excellentie.</p>
-      <address class="text-muted">
-       <p class="mb-2">{address}</p>
-       <p class="mb-2">Tel: <a href="tel:{telephone}" class="text-muted text-decoration-none">{telephone}</a></p>
-       <p class="mb-0">Email: <a href="mailto:info@domain.com" class="text-muted text-decoration-none">info@domain.com</a></p>
-      </address>
-     </div>
-     <div class="col-12 col-md-6 col-lg-2">
-      <h3 class="h6 fw-bold mb-3">Navigatie</h3>
-      <ul class="list-unstyled">
-       <li class="mb-2"><a href="/" class="text-muted text-decoration-none">Home</a></li>
-       <li class="mb-2"><a href="about.html" class="text-muted text-decoration-none">Over Ons</a></li>
-       <li class="mb-2"><a href="services.html" class="text-muted text-decoration-none">Diensten</a></li>
-       <li class="mb-2"><a href="careers.html" class="text-muted text-decoration-none">Carrières</a></li>
-       <li class="mb-2"><a href="contact.html" class="text-muted text-decoration-none">Contact</a></li>
-      </ul>
-     </div>
-     <div class="col-12 col-md-6 col-lg-3">
-      <h3 class="h6 fw-bold mb-3">Juridisch</h3>
-      <ul class="list-unstyled">
-       <li class="mb-2"><a href="privacy.html" class="text-muted text-decoration-none">Privacyverklaring</a></li>
-       <li class="mb-2"><a href="terms_and_conditions.html" class="text-muted text-decoration-none">Algemene Voorwaarden</a></li>
-       <li class="mb-2"><a href="terms_of_services.html" class="text-muted text-decoration-none">Gebruiksvoorwaarden</a></li>
-       <li class="mb-2"><a href="cookie_policy.html" class="text-muted text-decoration-none">Cookiebeleid</a></li>
-       <li class="mb-2"><a href="gdpr-rights.html" class="text-muted text-decoration-none">AVG Rechten</a></li>
-       <li class="mb-2"><a href="impressum.html" class="text-muted text-decoration-none">Impressum</a></li>
-      </ul>
-     </div>
-     <div class="col-12 col-md-6 col-lg-3">
-      <h3 class="h6 fw-bold mb-3">Openingstijden</h3>
-      <p class="text-muted small mb-1">Maandag - Vrijdag: 09:00 - 18:00</p>
-      <p class="text-muted small mb-3">Weekend: Gesloten</p>
-      <p class="text-muted small">Spoedgevallen: 24/7 bereikbaar</p>
-     </div>
+  <footer class="dr-footer" aria-label="Website footer">
+  <div class="dr-footer-inner">
+    <div class="dr-footer-top">
+      <div class="dr-footer-brand-block">
+        <div class="dr-footer-logo" aria-label="domain">
+          <span class="dr-footer-logo-text">Consultancy Advies</span>
+        </div>
+        <p class="dr-footer-tagline">Professioneel advies en consultancy voor duurzame groei.</p>
+      </div>
+      <nav class="dr-footer-nav" aria-label="Hoofdnavigatie">
+        <h2 class="dr-footer-heading">Navigatie</h2>
+        <ul class="dr-footer-nav-list">
+          <li class="dr-footer-nav-item"><a href="./index.html" class="dr-footer-link">Home</a></li>
+          <li class="dr-footer-nav-item"><a href="./about.html" class="dr-footer-link">About</a></li>
+          <li class="dr-footer-nav-item"><a href="./careers.html" class="dr-footer-link">Careers</a></li>
+          <li class="dr-footer-nav-item"><a href="./contact.html" class="dr-footer-link">Contact</a></li>
+          <li class="dr-footer-nav-item"><a href="./services.html" class="dr-footer-link">Services</a></li>
+        </ul>
+      </nav>
+      <nav class="dr-footer-legal" aria-label="Juridische informatie">
+        <h2 class="dr-footer-heading">Juridisch</h2>
+        <ul class="dr-footer-legal-list">
+          <li class="dr-footer-legal-item"><a href="./privacy.html" class="dr-footer-link">Privacy Policy</a></li>
+          <li class="dr-footer-legal-item"><a href="./terms_of_services.html" class="dr-footer-link">Terms of Service</a></li>
+          <li class="dr-footer-legal-item"><a href="./terms_and_conditions.html" class="dr-footer-link">Terms and Conditions</a></li>
+          <li class="dr-footer-legal-item"><a href="./cookie_policy.html" class="dr-footer-link">Cookie Policy</a></li>
+          <li class="dr-footer-legal-item"><a href="./gdpr-rights.html" class="dr-footer-link">GDPR Rights</a></li>
+          <li class="dr-footer-legal-item"><a href="./impressum.html" class="dr-footer-link">Impressum</a></li>
+        </ul>
+      </nav>
+      <section class="dr-footer-contact" aria-label="Contactgegevens">
+        <h2 class="dr-footer-heading">Contact</h2>
+        <div class="dr-footer-contact-block">
+          <p class="dr-footer-contact-item dr-footer-contact-address"><span class="dr-footer-contact-label">Adres:</span> The Hague Tower, Rijswijkseplein 786, Floor 9, Office 914, 2516 LX Den Haag</p>
+          <p class="dr-footer-contact-item"><span class="dr-footer-contact-label">Telefoon:</span> <a href="tel:+31 20 8331199" class="dr-footer-link">+31 20 8331199</a></p>
+          <p class="dr-footer-contact-item"><span class="dr-footer-contact-label">E-mail:</span> <a href="mailto:team@domain.com" class="dr-footer-link">team@domain.com</a></p>
+        </div>
+      </section>
     </div>
-    <hr class="my-4">
-    <div class="row">
-     <div class="col-12 text-center">
-      <p class="text-muted small mb-0">© 2025 Consultancy Advies. Alle rechten voorbehouden.</p>
-     </div>
+    <div class="dr-footer-bottom">
+      <p class="dr-footer-disclaimer">De informatie op deze website wordt uitsluitend verstrekt door domain via domain.com voor algemene informatiedoeleinden en vormt geen juridisch, financieel of professioneel advies.</p>
+      <p class="dr-footer-meta"><span class="dr-year"></span> © domain. All rights reserved.</p>
     </div>
-   </div>
-  </footer>
-  <script src="script.js" defer=""></script>
+  </div>
+</footer>
+  
  
+  
+  
+
+<script src="script.js" defer=""></script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+if (typeof AOS !== "undefined" && !window.__AOS_INITIALIZED__) {
+  AOS.init({ once: true, duration: 700, easing: "ease-out-cubic" });
+  window.__AOS_INITIALIZED__ = true;
+}
+</script>
+<script src="./header-footer.js"></script>
 </body></html>
